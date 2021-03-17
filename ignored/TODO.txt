@@ -1,0 +1,10 @@
+// Exercise programmatically builds navigation,
+// scrolls to anchors from navigation,
+// and highlights section in viewport upon scrolling.
+
+---------------------------------------------------------------------------------------------------
+
+// Hide fixed navigation bar while not scrolling (it should still be present on page load).
+        // Hint: setTimeout can be used to check when the user is no longer scrolling.
+// TODO: Add a scroll to top button
+// TODO: Make sections collapsible.

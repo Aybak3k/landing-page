@@ -1,0 +1,206 @@
+   null vs undefinded
+- null :: value of nth
+- undefined :: absence of value
+
+
+   truthy and falsy
+- "", 0, null&un.., false, NaN r falsy
+
+
+   distructioning
+@example
+	// const point = [10, 25, -34];
+	// const [x, y, z] = point;
+- objects
+	// let {color} = gemstone
+	// the property "color"
+	// "this" s now useless
+
+
+   object literal shorthand
+- let obj = {varsNames}
+- ': function' :: calculateWorth() {...}
+
+
+   for...of
+@example
+	// for (const item of [1, 2, 3]){ 
+	// console.log(item)} 
+
+
+   rest parameter
+- const [thing1, thiing2 ...items] = order;
+- variadic functions
+	// sum(...nums) :: total += num
+	// insteada arguements obj
+
+----------------------------------------------------------------
+   the DOM lesson 1
+
+properties : nextElementSibling ?
+----------------------------------------------------------------
+
+   the querySelector method
+- ("") => CSS selector
+- returns a single ele
+	// ID :: OK
+	// class || Tag :: 1st only
+	// ('p.callout')
+- ...All()
+
+
+   Update page cntnt (HTML, txt)
+- .innerHTML
+- .outerHTML :: zEle + allIn
+- .textContent
+- .innerText :: as seen visually
+
+
+   Add page cntnt
+- create tag + cntnt
+	// document.createElement('span')
+	// .textContent = ', right now!'
+		# document.createTextNode('') + appendChild()
+	// .appendChild() :: h3Tag.
+		# .body.
+		# moves eles to da new position.
+- .insertAdjacentHTML()
+	// html location
+		# beforebegin / after / end
+	// ('afterend', htmlTextToAdd)
+
+
+   Remove page cntnt
+- .removeChild()
+	// parent.removeChild(child)
+	// child.parentElement.removeChild(child);
+- .remove()
+	// child.remove()
+- "firstElementChild"
+	// parent.firstElementChild
+	// .firstChild :: like whitespace
+
+
+   style page content => classList
+- .style.<prop>
+	// one style at a time
+- .style.cssText
+	// writing ordinary css
+	// overrides style attr, css
+- .setAttribute()
+	// setAttribute('style', 'color: blue');
+- .className
+	// sp '' of all z ele classes
+	// clsArr = ...split(' ')
+- .classList :: DOMTokenList
+	// .add()
+	// .remove()
+	// .toggle()
+	// .contains()
+
+
+----------------------------------------------------------------
+   Events
+----------------------------------------------------------------
+are they the same jacket?
+2 diff names fr same obj :: memory address
+:: r they 2 sep obj || diff names refs to 1 obj
+----------------------------------------------------------------
+
+
+   Monitor Events
+- monitorEvents(document)
+	// monitorEvents(document.body, "click");
+- unmonitorEvents(document.body);
+
+
+   EventTarget Interface
+- .addEventListener()
+	// target.addEventListener(event, func);
+	// def => bubbling phase
+	// 3rd para :: ture => capturing phase
+		# WHICH MEANS that it'll fire when a bubbling 
+		# event gets triggered even if not called directly
+- .removeEventListener()
+	// () => same exact listener func
+	// + same target && type
+- .dispatchEvent()
+
+
+   sm Events
+- click
+- dblclick
+- scroll
+- resize
+- DOMContentLoaded => document.onload(...)
+	//  for a needed hot-to-run code
+
+   Event Phases
+- the capturing phase
+- the at target phase
+- and the bubbling phase
+
+
+   Event Obj
+- event.preventDefault();
+- event delegation
+	// event.target
+		# .nodeName === 'SPAN'
+
+
+   Dom.isReady()
+- scipt at bottom ||
+- browser events!
+
+
+----------------------------------------------------------------
+how to measure the speed of your code
+sync, thread
+----------------------------------------------------------------
+
+
+   performance.now()
+- performance.now()
+- run the code you want to test
+- performance.now() => another time measurement
+- subtract
+	// adding to div then to body is .15ms fater
+
+
+   document.createDocumentFragment()
+- browser constantly working :: screen matchs DOM
+- addin new ele => browser reflow calculation
+- frag isn part o active doc tree struc
+	// create frag
+	// loop => frag.appendChild
+	// .appendChild(frag)
+
+
+   Reflow & Repaint
+- reflow :: browser lay ou' da page => DOM, css r loaded
+- repaint => after reflow :: new layout
+- hide, delete, show-it-again => Reactjs :: Virtual DOM
+
+
+   Call Stack
+- JS s Single Threading
+- hw ds js engine no wer it lft off & hw te gt bk te it?
+	// it keeps a call stack :: list of ()s runnin
+
+
+   Event Loop
+- the browser, the queue, the callstack
+
+---
+notes: Asynchronous code makes use of the JavaScript Event Loop. Any asynchronous code (like setTimeout or the function passed to .addEventListener()) is handled by the browser. When this asynchronous code is ready to be executed, it's moved to the queue where it waits until the Call Stack is empty. Whenever the Call Stack is empty, code moves from the Queue over to the Call Stack and gets executed
+---
+
+
+setTimeout(function sayHi() {
+    console.log('Howdy'); // if callStack.isEmpty()
+}, 1000);
+// now this s useful for a 20k Ps + user interactions => 0ms
+If you try running this code on a page, you can still interact with the page while the code is running. It doesn't lock up or freeze the page. And it doesn't lock up or freeze because of the setTimeout() calls.
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+- custom attr => data-*
