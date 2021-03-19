@@ -1,6 +1,3 @@
-- responsive
-- README.md
-
 - topButton
 - Hide fixed nav bar while not scrolling
 - Add an active state to ur nav item

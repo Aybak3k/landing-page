@@ -1,13 +1,11 @@
-# Landing Page Project
+## Landing Page Project
 
-## Table of Contents
+a single page project where the nav bar gets if there is a change in the page content. I also made it responsive that when shown in small devices a button appears that you can click to show the links. let's not forget that when you press a link from the nav bar it scrolls smoothly to the target content and gets highlighted
+[page preview](https://nouraybak.github.io/landing-page/)
 
-* [Instructions](#instructions)
+---
 
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Technologies used
+* html
+* css
+* js
