@@ -81,6 +81,7 @@ section {
     padding-left: 0;
     margin: 0;
     text-align: left;
+    display: flex;
 }
 
 .navbar__menu li {
@@ -100,6 +101,17 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
 }
 
 /* Header Styles */
@@ -227,5 +239,26 @@ section.your-active-class .landing__container::after {
     }
     to {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    }
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 768px) {
+    #navbar__list {
+        flex-direction: column;
+    }
+    #navbar__list {
+        position: absolute;
+        right: 0;
+        top: 53px;
+        background: #fff;
+        width: 150px;
+        text-align: center;
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
     }
 }

@@ -1,11 +1,6 @@
-// viewport
-// res
-// md
-// ruburic
+- responsive
+- README.md
 
----------------------------------------------------------------------------------------------------
-
-// Hide fixed navigation bar while not scrolling (it should still be present on page load).
-        // Hint: setTimeout can be used to check when the user is no longer scrolling.
-// TODO: Add a scroll to top button
-// TODO: Make sections collapsible.
+- topButton
+- Hide fixed nav bar while not scrolling
+- Add an active state to ur nav item
