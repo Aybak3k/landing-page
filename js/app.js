@@ -9,17 +9,19 @@ const isInViewport = () => {
         if (section.getBoundingClientRect().top < window.innerHeight) {
             section.classList.add("your-active-class")
         }
-        if (section.getBoundingClientRect().top < -255) {
+        if (section.getBoundingClientRect().top < 0 || section.getBoundingClientRect().top >  window.innerHeight) {
             section.classList.remove("your-active-class")
         }
     }
 }
 
 const showLinks = () => {
-    if (window.getComputedStyle(navbarList).display === "none") {
-        navbarList.style.display = "flex"
-    } else if (window.getComputedStyle(navbarList).display === "flex") {
+    if (navbarList.style.display == "") {
+        navbarList.style.display = "block"
+    } else if (navbarList.style.display == "block") {
         navbarList.style.display = "none"
+    } else {
+        navbarList.style.display = "block"
     }
 }
 
